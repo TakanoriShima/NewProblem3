@@ -242,6 +242,7 @@ public class Review06Advance {
 			String sql = "INSERT INTO users(name, email, password) VALUES(?, ?, ?)";
 			pstmt = con.prepareStatement(sql);
 
+			// 名前入力チェック
 			String name = "";
 			do {
 				System.out.print("名前を入力してください > ");
@@ -252,7 +253,7 @@ public class Review06Advance {
 				System.out.println("[入力エラー] 名前を正しく入力してください");
 			} while (true);
 
-			// メールアドレス重複チェック
+			// メールアドレス入力チェック
 			String email = "";
 			do {
 				System.out.print("メールアドレスを入力してください > ");
@@ -264,6 +265,7 @@ public class Review06Advance {
 				System.out.println("[入力エラー] メールアドレスを正しく入力してください");
 			} while (true);
 
+			// パスワード入力チェック
 			String password = "";
 			do {
 				System.out.print("5文字以上のパスワードを入力してください > ");
